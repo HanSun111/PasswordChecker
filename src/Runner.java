@@ -13,9 +13,13 @@ public class Runner {
             System.out.println("- Contains at least one of these symbols: ! @ # $ % ^ & * ?");
             System.out.print("\nEnter your secure password: ");
             String password = scanner.nextLine();
+
             SecurePassword sheesh = new SecurePassword(password);
+            System.out.println(sheesh.status());
             while(!sheesh.isSecure()){
-                
+                password = scanner.nextLine();
+                sheesh.setPassword(password);
+                System.out.println(sheesh.status());
             }
 
     }

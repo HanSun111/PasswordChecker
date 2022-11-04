@@ -134,7 +134,7 @@ public class SecurePassword
     private boolean checkString(String characterString) {
         String stuff = "";
         for (int x = 0; x <= characterString.length(); x++) {
-            if (password.indexOf(x) != -1) {
+            if (password.indexOf(characterString.indexOf(x)) != -1) {
                 return true;
             }
         }
